@@ -2,27 +2,42 @@ import React, { Component } from "react";
 
 class Counter extends React.Component {
   state = {
-    count: 4,
-    tags: ["tag1", "tag2", "tag3"],
+    count: 0,
+    //tags: [],
   };
+  constructor() {
+    super();
+    this.handleIncrement = this.handleIncrement.bind(this);
+  }
+  handleIncrement() {
+    console.log("Increment Clicked", this);
+  }
 
   renderTags() {
     if (this.state.tags.length === 0) return <p>There are no tags!</p>;
-    return <ul>{this.state.tags.map((tag = <li key={tag}>{tag}</li>))}</ul>;
+    return (
+      <ul>
+        {this.state.tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
-    let classes = this.getBadgeClasses();
     return (
-      <React.Fragment>
+      <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
-        <ul>
-          {this.state.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-      </React.Fragment>
+        <button
+          onClick={this.handleIncrement}
+          className={this.getBadgeClasses()}
+        >
+          Increment
+        </button>
+
+        {/* {this.state.tags.length === 0 && "Please create new tag!"}
+        <ul>{this.renderTags()}</ul> */}
+      </div>
     );
   }
   getBadgeClasses() {
