@@ -5,13 +5,10 @@ class Counter extends React.Component {
     count: 0,
     //tags: [],
   };
-  constructor() {
-    super();
-    this.handleIncrement = this.handleIncrement.bind(this);
-  }
-  handleIncrement() {
+
+  handleIncrement = () => {
     console.log("Increment Clicked", this);
-  }
+  };
 
   renderTags() {
     if (this.state.tags.length === 0) return <p>There are no tags!</p>;
@@ -34,9 +31,6 @@ class Counter extends React.Component {
         >
           Increment
         </button>
-
-        {/* {this.state.tags.length === 0 && "Please create new tag!"}
-        <ul>{this.renderTags()}</ul> */}
       </div>
     );
   }
