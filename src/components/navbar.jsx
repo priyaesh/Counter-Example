@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-const NavBar = (props) => {
+const NavBar = ({ totalCounters }) => {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Navbar
-          <span className="badge pill secondary">{props.totalCounters}</span>
+          <span className="badge pill secondary">{totalCounters}</span>
         </a>
       </div>
     </nav>
