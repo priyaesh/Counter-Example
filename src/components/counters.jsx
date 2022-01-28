@@ -25,13 +25,13 @@ class Counters extends React.Component {
 
     console.log("Event Handler called", counterid);
   };
-  // handleReset = () => {
-  //   this.state.counters.map((c) => {
-  //     c.value = 0;
-  //     return c;
-  //   });
-  //   this.setState({ counter });
-  // };
+  handleReset = () => {
+    const counters = this.state.counters.map((c) => {
+      c.value = 0;
+      return c;
+    });
+    this.setState({ counters });
+  };
 
   render() {
     return (

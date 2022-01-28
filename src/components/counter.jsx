@@ -6,6 +6,7 @@ class Counter extends React.Component {
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+
         <button
           onClick={() => this.props.onIncrement(this.props.counter)}
           className={this.getBadgeClasses()}
