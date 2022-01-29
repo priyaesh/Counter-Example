@@ -3,7 +3,8 @@ import Counter from "./counter";
 
 class Counters extends React.Component {
   render() {
-    const { onReset, onIncrement, onDelete, counters } = this.props;
+    const { onDelete, onIncrement, onReset } = this.props;
+    console.log("counters-Renered");
     return (
       <div>
         <button onClick={onReset} className="btn btn-primary btn-sm m-2">
