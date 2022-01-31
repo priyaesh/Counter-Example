@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 
 class Counter extends React.Component {
+<<<<<<< HEAD
   test() {}
+=======
+  test1() {}
+>>>>>>> 40e57640a86de5bc3389dd7e67b2a5a8cff00044
   render() {
     console.log("counter-Rendered");
     return (
