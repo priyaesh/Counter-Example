@@ -1,12 +1,20 @@
 import React, { Component } from "react";
 
 class Counter extends React.Component {
+<<<<<<< HEAD
   componentDidUpdate(prevProps, prevState) {
     console.log("prevProps", prevProps);
     console.log("prevState", prevState);
     if (prevProps.counter.value !== this.state.counter.value) {
     }
   }
+=======
+<<<<<<< HEAD
+  test() {}
+=======
+  test1() {}
+>>>>>>> 40e57640a86de5bc3389dd7e67b2a5a8cff00044
+>>>>>>> d633cce8d049e57671c1fd25c9e34fc1ffa88c8e
   render() {
     console.log("counter-Rendered");
     return (
