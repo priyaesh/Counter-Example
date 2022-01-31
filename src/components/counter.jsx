@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class Counter extends React.Component {
+  test() {}
   render() {
     console.log("counter-Rendered");
     return (

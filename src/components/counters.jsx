@@ -5,7 +5,6 @@ class Counters extends React.Component {
   render() {
     const { onDelete, onIncrement, onReset } = this.props;
     console.log("counters-Renered");
-    console.log("test commit for reset");
     return (
       <div>
         <button onClick={onReset} className="btn btn-primary btn-sm m-2">
